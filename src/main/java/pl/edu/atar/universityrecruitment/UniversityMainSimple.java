@@ -1,6 +1,5 @@
 package pl.edu.atar.universityrecruitment;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.kie.api.KieBase;
