@@ -1,9 +1,6 @@
 package pl.edu.atar.universityrecruitment;
 
-import org.drools.core.event.DefaultAgendaEventListener;
 import org.kie.api.KieServices;
-import org.kie.api.event.rule.DebugAgendaEventListener;
-import org.kie.api.event.rule.DebugRuleRuntimeEventListener;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 
