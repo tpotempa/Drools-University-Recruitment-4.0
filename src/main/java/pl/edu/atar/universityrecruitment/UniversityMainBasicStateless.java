@@ -24,7 +24,7 @@ public class UniversityMainBasicStateless {
         // Rezultaty działania silnika wnioskującego są zwracane w oknie konsoli.
 
         // Uruchamiany przykład
-        int example = 1;
+        int example = 2;
 
         // Logowanie zebranych informacji
         int counter = 1;
@@ -66,11 +66,12 @@ public class UniversityMainBasicStateless {
                     break;
             }
 
+            kService.getLoggers().newConsoleLogger(kSession);
+            kService.getLoggers().newFileLogger(kSession, "./logs/reasoning_basic_stateless_fact_" + counter);
+
             // Wnioskowanie z użyciem przekazanego faktu
             kSession.execute(fact);
 
-            kService.getLoggers().newConsoleLogger(kSession);
-            kService.getLoggers().newFileLogger(kSession, "./logs/reasoning_basic_stateless_fact_" + counter);
             LOGGER.info(fact.getCandidateInformationLogger());
 
             counter++;

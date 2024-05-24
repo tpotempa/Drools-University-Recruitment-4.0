@@ -15,7 +15,7 @@ public class UniversityMainAdvanced {
 	public static void main(String[] args) {
 		KieServices ks = KieServices.Factory.get();
 		KieContainer kContainer = ks.getKieClasspathContainer();
-		KieSession kSession = kContainer.newKieSession("ksession-rules");
+		KieSession kSession = kContainer.newKieSession("ksession-rules-advanced");
 		
 		UniversityCandidate uc1 = new UniversityCandidate(1L, "Anna", "Kowalewska", 120.0, Boolean.FALSE, "Informatyka", Boolean.TRUE, "Female");
 		UniversityCandidate uc2 = new UniversityCandidate(2L, "Jacek", "Nowak", 110.0, Boolean.FALSE, "Informatyka", Boolean.FALSE, "Male");		
