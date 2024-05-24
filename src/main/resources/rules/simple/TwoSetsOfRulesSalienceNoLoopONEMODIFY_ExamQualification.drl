@@ -5,7 +5,7 @@ import pl.edu.atar.universityrecruitment.UniversityCandidate;
 // Informatyka
 rule "Exam Qualification / Informatyka (two_sets_of_rules_salience_no-loop_ONE_MODIFY)"
 dialect "java"
-agenda-group "two_sets_of_rules_salience_no-loop_bonus_MODIFY"
+agenda-group "two_sets_of_rules_salience_no-loop_ONE_MODIFY"
 salience 100
 when
     $uc : UniversityCandidate(examResult > 100, fieldOfStudy == "Informatyka")
@@ -19,7 +19,7 @@ end
 // Automatyka i robotyka
 rule "Exam Qualification / Automatyka i robotyka (two_sets_of_rules_salience_no-loop_ONE_MODIFY)"
 dialect "java"
-agenda-group "two_sets_of_rules_salience_no-loop_bonus_MODIFY"
+agenda-group "two_sets_of_rules_salience_no-loop_ONE_MODIFY"
 salience 100
 when
     $uc : UniversityCandidate(examResult > 60, fieldOfStudy == "Automatyka i robotyka")
@@ -33,7 +33,7 @@ end
 // Elektrotechnika
 rule "Exam Qualification / Elektrotechnika (two_sets_of_rules_salience_no-loop_ONE_MODIFY)"
 dialect "java"
-agenda-group "two_sets_of_rules_salience_no-loop_bonus_MODIFY"
+agenda-group "two_sets_of_rules_salience_no-loop_ONE_MODIFY"
 salience 100
 when
     $uc : UniversityCandidate(examResult > 80, fieldOfStudy == "Elektrotechnika")
