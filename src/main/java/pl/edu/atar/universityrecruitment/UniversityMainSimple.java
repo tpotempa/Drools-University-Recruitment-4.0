@@ -26,7 +26,7 @@ public class UniversityMainSimple {
         // Rezultaty działania silnika wnioskującego są zwracane w oknie konsoli.
 
         // Uruchamiany przykład
-        int example = 1;
+        int example = 6;
 
         // Logowanie zebranych informacji
         int counter = 1;
@@ -72,8 +72,14 @@ public class UniversityMainSimple {
                     // Set 2. Example 4.
                     // OPIS: Uruchamianie 2 zbiorów reguł kwalifikacyjnych. Oba zbiory reguł nie
                     // wykluczają się tj. mogą być uruchomione reguły z obu zbiorów.
-                    // Reguły z obu zbiorów są wykonywane z MODFIKACJĄ faktu
+                    // Reguła ze zbioru "OlympicQualification" jest wykonywana z MODFIKACJĄ faktu
                     // powodującą uruchomienie ponownego wnioskowania.
+                    // Modyfikacja polega na 2-krotnym zwiększeniu liczby punktów egzaminacyjnych,
+                    // uzyskanych przez kandydata będącego finalistą olimipiady.
+                    // Należy podkreślić, że kandydat będący finalistą olimpiady nie może zostać przyjęty
+                    // bezpośrednio na podstawie olimpiady. Jedyną podstawą kwalifikacji kandydata
+                    // jest liczba egzaminacyjnych.
+                    // Reguła "ExamQualification" jest także wykonywana z modyfikacją faktu.
                     // Reguły posiadają parametry no-loop oraz salience.
                     kSession.getAgenda().getAgendaGroup("two_sets_of_rules_salience_no-loop_MODIFY").setFocus();
                     break;
@@ -81,10 +87,16 @@ public class UniversityMainSimple {
                     // Set 2. Example 5.
                     // OPIS: Uruchamianie 2 zbiorów reguł kwalifikacyjnych. Oba zbiory reguł nie
                     // wykluczają się tj. mogą być uruchomione reguły z obu zbiorów.
-                    // Reguły z obu zbiorów są wykonywane z MODFIKACJĄ faktu
+                    // Reguła ze zbioru "OlympicQualification" jest wykonywana z MODFIKACJĄ faktu
                     // powodującą uruchomienie ponownego wnioskowania.
-                    // Reguły posiadają parametry lock-on-active oraz salience.
-                    kSession.getAgenda().getAgendaGroup("two_sets_of_rules_salience_lock-on-active_MODIFY").setFocus();
+                    // Modyfikacja polega na 2-krotnym zwiększeniu liczby punktów egzaminacyjnych,
+                    // uzyskanych przez kandydata będącego finalistą olimipiady.
+                    // Należy podkreślić, że kandydat będący finalistą olimpiady nie może zostać przyjęty
+                    // bezpośrednio na podstawie olimpiady. Jedyną podstawą kwalifikacji kandydata
+                    // jest liczba egzaminacyjnych.
+                    // Reguła "ExamQualification" jest wykonywana nez modyfikacji faktu.
+                    // Reguły posiadają parametry no-loop oraz salience.
+                    kSession.getAgenda().getAgendaGroup("two_sets_of_rules_salience_no-loop_ONE_MODIFY").setFocus();
                     break;
                 case 6:
                     // Set 2. Example 6.
@@ -97,8 +109,9 @@ public class UniversityMainSimple {
                     // Należy podkreślić, że kandydat będący finalistą olimpiady nie może zostać przyjęty
                     // bezpośrednio na podstawie olimpiady. Jedyną podstawą kwalifikacji kandydata
                     // jest liczba egzaminacyjnych.
-                    // Reguły posiadają parametry no-loop oraz salience.
-                    kSession.getAgenda().getAgendaGroup("two_sets_of_rules_salience_no-loop_bonus_MODIFY").setFocus();
+                    // Reguła "ExamQualification" jest także wykonywana z modyfikacją faktu.
+                    // Reguły posiadają parametry lock-on-active oraz salience.
+                    kSession.getAgenda().getAgendaGroup("two_sets_of_rules_salience_lock-on-active_MODIFY").setFocus();
                     break;
             }
 

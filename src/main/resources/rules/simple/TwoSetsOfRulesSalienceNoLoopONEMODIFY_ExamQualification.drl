@@ -3,7 +3,7 @@ package rules.simple
 import pl.edu.atar.universityrecruitment.UniversityCandidate;
 
 // Informatyka
-rule "Exam Qualification / Informatyka (two_sets_of_rules_salience_no-loop_bonus_MODIFY)"
+rule "Exam Qualification / Informatyka (two_sets_of_rules_salience_no-loop_ONE_MODIFY)"
 dialect "java"
 agenda-group "two_sets_of_rules_salience_no-loop_bonus_MODIFY"
 salience 100
@@ -12,12 +12,12 @@ when
 then
     $uc.setAdmission(true);
     $uc.setQualificationType("Exam qualification");
-    $uc.appendLogger("Agenda 'TWO_SETS_OF_RULES_SALIENCE_NO_LOOP_BONUS_MODIFY' got focus!");
+    $uc.appendLogger("Agenda 'TWO_SETS_OF_RULES_SALIENCE_NO_LOOP_ONE_MODIFY' got focus!");
     $uc.appendLogger("Rule 'Exam qualification / Informatyka' fired!");
 end
 
 // Automatyka i robotyka
-rule "Exam Qualification / Automatyka i robotyka (two_sets_of_rules_salience_no-loop_bonus_MODIFY)"
+rule "Exam Qualification / Automatyka i robotyka (two_sets_of_rules_salience_no-loop_ONE_MODIFY)"
 dialect "java"
 agenda-group "two_sets_of_rules_salience_no-loop_bonus_MODIFY"
 salience 100
@@ -26,12 +26,12 @@ when
 then
     $uc.setAdmission(true);
     $uc.setQualificationType("Exam qualification");
-    $uc.appendLogger("Agenda 'TWO_SETS_OF_RULES_SALIENCE_NO_LOOP_BONUS_MODIFY' got focus!");
+    $uc.appendLogger("Agenda 'TWO_SETS_OF_RULES_SALIENCE_NO_LOOP_ONE_MODIFY' got focus!");
     $uc.appendLogger("Rule 'Exam qualification / Automatyka i robotyka' fired!");
 end
 
 // Elektrotechnika
-rule "Exam Qualification / Elektrotechnika (two_sets_of_rules_salience_no-loop_bonus_MODIFY)"
+rule "Exam Qualification / Elektrotechnika (two_sets_of_rules_salience_no-loop_ONE_MODIFY)"
 dialect "java"
 agenda-group "two_sets_of_rules_salience_no-loop_bonus_MODIFY"
 salience 100
@@ -40,6 +40,6 @@ when
 then
     $uc.setAdmission(true);
     $uc.setQualificationType("Exam qualification");
-    $uc.appendLogger("Agenda 'TWO_SETS_OF_RULES_SALIENCE_NO_LOOP_BONUS_MODIFY' got focus!");
+    $uc.appendLogger("Agenda 'TWO_SETS_OF_RULES_SALIENCE_NO_LOOP_ONE_MODIFY' got focus!");
     $uc.appendLogger("Rule 'Exam qualification / Elektrotechnika' fired!");
 end

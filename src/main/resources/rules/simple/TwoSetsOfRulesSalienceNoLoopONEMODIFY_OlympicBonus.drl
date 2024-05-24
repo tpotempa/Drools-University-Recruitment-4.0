@@ -13,7 +13,7 @@ when
 then
   	modify($uc) {
         setExamResult(2 * $uc.getExamResult()),
-        appendLogger("Agenda 'TWO_SETS_OF_RULES_SALIENCE_NO_LOOP_BONUS_MODIFY' got focus!"),
+        appendLogger("Agenda 'TWO_SETS_OF_RULES_SALIENCE_NO_LOOP_ONE_MODIFY' got focus!"),
     	appendLogger("Rule 'Olympic bonus' fired!")
     }
 end

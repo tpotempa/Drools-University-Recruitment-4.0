@@ -12,8 +12,7 @@ when
     $uc : UniversityCandidate(olympicFinalist == true)
 then
   	modify($uc) {
-		setAdmission(true),
-        setQualificationType("Olympic qualification"),
+        setExamResult(2 * $uc.getExamResult()),
         appendLogger("Agenda 'TWO_SETS_OF_RULES_SALIENCE_LOCK_ON_ACTIVE_MODIFY' got focus!"),
     	appendLogger("Rule 'Olympic qualification' fired!"),
 		incrementCounter()    	
