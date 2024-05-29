@@ -7,18 +7,34 @@ import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.kie.api.logger.KieRuntimeLogger;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UniversityMainIntermediate {
 
 	public static void main(String[] args) {
 		KieServices ks = KieServices.Factory.get();
 		KieContainer kContainer = ks.getKieClasspathContainer();
-		KieSession kSession = kContainer.newKieSession("ksession-rules");
+		KieSession kSession = kContainer.newKieSession("ksession-rules-intermediate");
 		
-		// Fakty
-		UniversityCandidate uc = new UniversityCandidate(1L, "Anna", "Kowalewska", 120.0, Boolean.FALSE, "Informatyka", Boolean.TRUE, "Female");
+		UniversityCandidate uc1 = new UniversityCandidate(1L, "Anna", "Kowalewska", 120.0, Boolean.FALSE, "Informatyka", Boolean.TRUE, "Female");
+		UniversityCandidate uc2 = new UniversityCandidate(2L, "Jacek", "Nowak", 110.0, Boolean.FALSE, "Informatyka", Boolean.FALSE, "Male");
+		UniversityCandidate uc3 = new UniversityCandidate(3L, "Ewa", "Wiśniowa", 35.0, Boolean.FALSE, "Elektrotechnika", Boolean.FALSE, "Female");
+		UniversityCandidate uc4 = new UniversityCandidate(4L, "Karol", "Gruszka", 135.0, Boolean.FALSE, "Automatyka i robotyka", Boolean.TRUE, "Male");
+		UniversityCandidate uc5 = new UniversityCandidate(5L, "Kinga", "Poziomka", 30.0, Boolean.FALSE, "Elektrotechnika", Boolean.TRUE, "Female");
 
-		// Dodanie do przetwarzania pojedynczego faktu
-		kSession.insert(uc);
+		// Utworzenie kolekcji 5 faktów
+		List<UniversityCandidate> uc = new ArrayList<UniversityCandidate>();
+		uc.add(uc1);
+		uc.add(uc2);
+		uc.add(uc3);
+		uc.add(uc4);
+		uc.add(uc5);
+
+		// Dodanie do przetwarzania zbioru 5 faktów
+		for(UniversityCandidate fact:uc) {
+			kSession.insert(fact);
+		}
 
 		// ZESTAW REGUŁ ŚREDNIOZAAWANSOWANYCH		
 		// HOW-TO :: Uruchomienie przykładu.
@@ -72,6 +88,8 @@ public class UniversityMainIntermediate {
 		kSession.dispose();
 				
 		// Logowanie zebranych informacji
-		System.out.println(uc.getCandidateInformation());
+		for(UniversityCandidate fact:uc) {
+			System.out.println(fact.getCandidateInformation());
+		}
 	}
 }

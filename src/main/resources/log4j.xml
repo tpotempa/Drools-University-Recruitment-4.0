@@ -8,7 +8,7 @@
     </appender>
 
     <category name="org.drools">
-        <priority value="info" />
+        <priority value="debug" />
     </category>
 
     <root>
